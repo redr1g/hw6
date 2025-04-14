@@ -1,0 +1,30 @@
+services:
+  business_logic:
+    build: ./business_logic
+    container_name: business_logic_service
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database_logic
+
+  database_logic:
+    build: ./database_logic
+    container_name: database_logic_service
+    ports:
+      - "8001:8001"
+
+  client_service:
+    build: ./client_logic
+    container_name: client_logic_service
+    ports:
+      - "8002:8002"
+    # environment:
+    #   - CLIENT_API_TOKEN=secret-token
+
+  scheduler_logic:
+    build: ./scheduler_logic
+    container_name: scheduler_service
+    ports:
+      - "8003:8003"
+    depends_on:
+      - business_logic
