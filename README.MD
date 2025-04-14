@@ -1,4 +1,4 @@
-## GitHub : https://github.com/redr1g/archw5/tree/main
+## GitHub : https://github.com/redr1g/hw6/tree/main
 
 ## How to run
 Go to `https://openrouter.ai/`, log in, create your API key. Place it to business_logic folder in .env file
