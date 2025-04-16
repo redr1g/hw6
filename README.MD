@@ -48,8 +48,8 @@ docker logs scheduler_service
 ![alt text](logs.png)
 
 ## 6. Clean working environment.
-podman logs client_service \
-docker logs client_service
+podman compose down \
+docker compose down
 
 # Task 2
 ## 3. Create a compose file that describes both of your applications
